@@ -29,7 +29,6 @@ Javadocs give programmers a consistent, structured way to document:
 - what a method does  
 - what each parameter means  
 - what value is returned  
-- what exceptions might occur  
 
 Because the format is standardized, IDEs with advanced Java language support can display pop‑up documentation when a method is hovered or called, like this:
 
@@ -44,7 +43,6 @@ A Javadoc block typically includes:
 - A summary sentence  
 - One `@param` tag per parameter  
 - One `@return` tag for return methods  
-- Optional `@throws` for exceptions  
 
 ### Examples of Javadocs
 Here are some examples of methods and corresponding Javadocs:
@@ -96,22 +94,6 @@ private int countVowels(String word) {
         }
     }
     return count;
-}
-```
-
-#### Validation + `IllegalArgumentException`
-```java
-/**
- * Returns the square root of x as an integer approximation.
- * @param x the number to square root; must be non-negative
- * @return an integer representing the approximate square root
- * @throws IllegalArgumentException if x is negative
- */
-private int safeSqrt(int x) {
-    if (x < 0) {
-        throw new IllegalArgumentException("x must be non-negative");
-    }
-    return (int) Math.sqrt(x);
 }
 ```
 
@@ -175,8 +157,7 @@ Document methods that have:
 
 - loops  
 - conditions  
-- validation  
-- potential exceptions  
+- non-obvious logic  
 
 ### In Summary
 
@@ -238,19 +219,7 @@ private boolean hasVowel(String word) {
 }
 ```
 
-## Problem 4 — Javadocs for a Method with Constraints
-Add full Javadocs, including description, parameter details, return value, and the exception thrown.
-
-```java
-private int safePercent(int part, int whole) {
-    if (whole == 0) {
-        throw new IllegalArgumentException("whole must be non-zero");
-    }
-    return (part * 100) / whole;
-}
-```
-
-## Problem 5 — Write Both the Javadocs and the Method
+## Problem 4 — Write Both the Javadocs and the Method
 Write the missing method and its complete Javadocs.  
 The method returns the first 3 characters of `s` repeated `times` times.  
 Assume `s` has at least 3 characters.
@@ -261,18 +230,6 @@ Assume `s` has at least 3 characters.
  */
 private String frontTimes(String s, int times) {
     // TODO
-}
-```
-
-## Problem 6 — Javadocs for a Method with Validation  
-Write full Javadocs explaining what the method does, how it uses parameters, and under what conditions it throws an exception.
-
-```java
-private int difference(int a, int b) {
-    if (a < b) {
-        throw new IllegalArgumentException("a must be >= b");
-    }
-    return a - b;
 }
 ```
 

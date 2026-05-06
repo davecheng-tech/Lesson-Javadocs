@@ -31,7 +31,7 @@ Javadocs give programmers a consistent, structured way to document:
 - what value is returned  
 - what exceptions might occur  
 
-Because the format is standardized, IDEs like VS Code can display pop‑up documentation when a method is hovered or called, like this:
+Because the format is standardized, IDEs with advanced Java language support can display pop‑up documentation when a method is hovered or called, like this:
 
 ![javadocs](.media/01.png)
 
